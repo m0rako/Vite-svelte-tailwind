@@ -1,6 +1,6 @@
 <script lang="ts">
 	import '../app.css';
-	
+
 	let { children } = $props();
 </script>
 
@@ -141,11 +141,9 @@
 
   </div>
 
-
   <main class="container mx-auto px-[118px]">
     {@render children()}
   </main>
-
 
 <!--  <footer class="container mx-auto px-[118px]">-->
 <!--    fas-->
