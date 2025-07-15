@@ -1,7 +1,9 @@
 <script lang="ts">
   import Carousel from '$lib/components/sliders/Carousel.svelte';
+  import type {CarouseItemType} from "$lib/types/carousel";
+  import type {CarouselOptions} from "@fancyapps/ui/dist/carousel/carousel";
 
-  const imageList = [
+  const imageList: CarouseItemType[] = [
     { src: '/images/cards/vakans.png', link: '#', title: 'Вакансии' },
     { src: '/images/cards/bibl.png', link: '#', title: 'Научно-техническая библиотека' },
     { src: '/images/cards/obshaga1.png', link: '#', title: 'Студенческий городок' },
@@ -24,16 +26,15 @@
     { src: '/images/cards/olimp.png', link: '#', title: '' },
   ];
 
-  const options = {
+  const options: Partial<CarouselOptions> = {
     infinite: true,
     slidesPerPage: 1,
     Autoplay: {
-      timeout: 2000,
+      // timeout: 2000,
     },
   };
 </script>
 
 <section class="max-w-screen-xl px-2 lg:px-0 mx-auto py-10 ">
-
   <Carousel images={imageList} options={options}/>
 </section>

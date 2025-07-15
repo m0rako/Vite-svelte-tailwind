@@ -1,0 +1,1 @@
+export type CarouseItemType = { src: string; link: string; title: string };

@@ -17,7 +17,7 @@
   ];
 </script>
 
-<div class="max-w-screen-xl px-2 lg:px-0 mx-auto text-white grid grid-cols-2 gap-y-10 mt-5 md:mt-[85px] font-medium">
+<div class="max-w-screen-xl px-2 lg:px-0 mx-auto text-white grid grid-cols-2 gap-y-10 font-medium">
 
   <!-- Блок с логотипом -->
   <div class="col-span-2 ">
