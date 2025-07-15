@@ -37,15 +37,12 @@
   cards.forEach(card => card.link = `/announcements/${card.slug}`);
 </script>
 
-<section class="max-w-screen-xl mx-auto px-4 pb-10 ">
-  <div class="flex gap-8 items-end pb-5  ">
-    <h2 class="text-3xl font-semibold">Объявления</h2>
-    <a href="/announcements" class="text-base font-bold text-[#0d635a]">Смотреть все</a>
-  </div>
+<section class="max-w-screen-xl mx-auto px-4 py-10">
+  <h1 class="text-3xl font-bold mb-6">Все объявления</h1>
 
   <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
-    {#each cards.slice(0, 3) as card}
-      <CardNotImage title={card.title} date={card.date} link={card.link} />
+    {#each cards as card}
+      <CardNotImage {...card} />
     {/each}
   </div>
 </section>

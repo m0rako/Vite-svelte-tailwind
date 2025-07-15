@@ -1,74 +1,100 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
+  import { onMount, onDestroy } from 'svelte';
+  import { Carousel } from '@fancyapps/ui/dist/carousel';
+  import '@fancyapps/ui/dist/carousel/carousel.css';
+  import { Autoplay } from '@fancyapps/ui/dist/carousel/carousel.autoplay.js';
+  import '@fancyapps/ui/dist/carousel/carousel.autoplay.css';
 
   export let images: { src: string; link: string; title: string }[] = [];
-  let current = 0;
-  let interval: any;
+  export let options: any = {
+    slidesPerPage: 1,
+    infinite: true,
+    Autoplay: { timeout: 3000 },
 
-  // Автоматическое листание
+  };
+
+  let sliderRef: HTMLDivElement;
+  let instance: any;
+
   onMount(() => {
-
-    interval = setInterval(() => {
-      next();
-    }, 3000);
-    return () => clearInterval(interval);
+    instance = Carousel(sliderRef, options, { Autoplay });
+    instance.init();
   });
 
-  function prev() {
-    if (current > 0) current--;
-  }
-
-  function next() {
-    if (current < images.length - 5) current++;
-    else current = 0;
-  }
-
-  $: translateStyle = `transform: translateX(-${current * 251}px)`; // 235 + gap 16
+  onDestroy(() => {
+    instance?.destroy();
+  });
 </script>
 
-<div class="relative w-full overflow-hidden">
-  <!-- Карусель -->
-  <div
-    class="flex gap-4 transition-transform duration-500"
-    style={translateStyle}
-  >
-    {#each images as img}
+<div class="f-carousel px-1" bind:this={sliderRef}>
+  {#each images as img}
+    <div class=" f-carousel__slide flex justify-center">
       <a
         href={img.link}
-        class="relative w-[235px] h-[305px] bg-cover bg-center rounded-xl flex-shrink-0 overflow-hidden transition"
-        style={`background-image: url(${img.src})`}
+        draggable="false"
+        class="block w-full max-w-[240px] h-[305px] bg-cover bg-center rounded-xl overflow-hidden"
+        style={`background-image: url(${img.src}); background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;`}
       >
-        <!-- Градиент (для читаемости текста) -->
-        <div class="absolute bottom-0 left-0 right-0 h-[30%] bg-gradient-to-t from-black/60 to-transparent"></div>
-
-        <!-- Заголовок -->
-        <div class="absolute bottom-0 left-0 p-3 z-10">
+        <div class="h-full flex items-end p-4 bg-gradient-to-t from-black/40 to-transparent">
           <h2 class="text-white text-xl font-semibold">{img.title}</h2>
         </div>
       </a>
-    {/each}
-
-  </div>
-
-  <!-- Кнопки под карточками -->
-  <div class="flex justify-center gap-4 mt-4">
-    <button
-      on:click={prev}
-      class="bg-white/80 hover:bg-[rgba(70,70,70,0.45)] cursor-pointer px-4 py-2 rounded-full"
-      aria-label="Предыдущий"
-    >
-      <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M8 1L2 7L8 13" stroke="#00753A" stroke-width="2" stroke-linecap="round"></path>
-      </svg>
-    </button>
-    <button
-      on:click={next}
-      class="bg-white/80 hover:bg-[rgba(70,70,70,0.45)] cursor-pointer px-4 py-2 rounded-full"
-      aria-label="Следующий"
-    >
-      <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1 13L7 7L1 0.999999" stroke="#00753A" stroke-width="2" stroke-linecap="round"></path>
-      </svg>
-    </button>
-  </div>
+    </div>
+  {/each}
 </div>
+
+<style>
+  :global(.f-progressbar) {
+    display: none !important;
+  }
+  .f-carousel {
+    --f-carousel-gap: 8px;
+    --f-carousel-slide-width: 19%; /* по умолчанию 5 карточек */
+  }
+
+  /*!* ≥1536px (2xl) — 5 карточек *!*/
+  /*@media (min-width: 1536px) {*/
+  /*  .f-carousel {*/
+  /*    --f-carousel-slide-width: 19%;*/
+  /*  }*/
+  /*}*/
+
+  /* ≥1280px (xl) — 4 карточки */
+  @media (max-width: 1535px) {
+    .f-carousel {
+      --f-carousel-slide-width: 24%;
+    }
+  }
+
+  /* ≥1024px (lg) — 3 карточки */
+  @media (max-width: 1279px) {
+    .f-carousel {
+      --f-carousel-slide-width: 32%;
+    }
+  }
+
+  /* ≥768px (md) — 2 карточки */
+  @media (max-width: 1023px) {
+    .f-carousel {
+      --f-carousel-gap: 15px;
+      --f-carousel-slide-width: 30%;
+    }
+  }
+
+  /* <768px — 2 карточка */
+  @media (max-width: 767px) {
+    .f-carousel {
+      --f-carousel-slide-width: 39%;
+    }
+  }
+  @media (max-width: 480px) {
+    .f-carousel {
+
+      --f-carousel-slide-width: 100%;
+    }
+  }
+
+
+</style>

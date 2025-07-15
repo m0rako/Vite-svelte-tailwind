@@ -21,19 +21,29 @@
   };
   let currentLang = languages[0];
 
+  export let isMainPage: boolean = true;
 </script>
 
-<nav class="text-sm lg:text-base text-white  relative z-50">
-  <div class="max-w-screen-xl mx-auto py-4 px-2 lg:px-0 flex items-center justify-between">
+<nav class={`text-sm lg:text-base relative z-50 text-white ${isMainPage ? '' : 'bg-[#F7F7F7]'}`}>
+  <div class="max-w-screen-xl  mx-auto py-4 px-2 lg:px-0 flex items-center justify-between">
 
     <!-- Логотипы -->
     <div class="flex flex-col md:flex-row items-start gap-5 w-full">
-      <a href="">
-        <img
-          src="/images/logo_dvgups.svg"
-          alt="Логотип университета"
-          class="h-9 md:h-[36px] w-auto max-w-[280px] lg:max-w-[392px] object-contain"
-        />
+
+      <a href="/">
+        {#if isMainPage}
+          <img
+            src="/images/logo_dvgups.svg"
+            alt="Логотип университета"
+            class="h-9 md:h-[36px] w-auto max-w-[280px] lg:max-w-[392px] object-contain"
+          />
+        {:else}
+          <img
+            src="/svg/logo-dvgups-dark.svg"
+            alt="Логотип университета"
+            class="h-9 md:h-[36px] w-auto max-w-[280px] lg:max-w-[392px] object-contain"
+          />
+        {/if}
       </a>
       <a href="">
         <img
