@@ -31,7 +31,7 @@
             <a
                     href={img.link}
                     draggable="false"
-                    class="block w-full h-[305px] bg-cover bg-center rounded-xl overflow-hidden"
+                    class="block w-full h-[250px] bg-cover bg-center rounded-xl overflow-hidden"
                     style={`background-image: url(${img.src}); background-position: center;
   background-repeat: no-repeat;
   background-size: cover;`}

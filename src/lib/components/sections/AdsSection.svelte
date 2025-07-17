@@ -1,51 +1,20 @@
 <script lang="ts">
-  import CardNotImage from '$lib/components/ui/CardNotImage.svelte';
-
-  const cards = [
-    {
-      slug: 'open-day',
-      title: 'Кафедра "Таможенное право и служебная деятельность" проводит День открытых дверей',
-      date: '11.07.2025',
-      link: '#'
-    },
-    {
-      title: 'Приглашаем ознакомиться с перечнем печатных и электронных периодических изданий на 2 полугодие 2025 года',
-      date: '04.07.2025',
-      link: '#'
-    },
-    {
-      title: 'Мастер-класс по регистрации в Электронно-библиотечных системах',
-      date: '05.06.2025',
-      link: '#'
-    },
-    {
-      title: 'Кафедра "Таможенное право и служебная деятельность" проводит День открытых дверей',
-      date: '11.07.2025',
-      link: '#'
-    },
-    {
-      title: 'Приглашаем ознакомиться с перечнем печатных и электронных периодических изданий на 2 полугодие 2025 года',
-      date: '04.07.2025',
-      link: '#'
-    },
-    {
-      title: 'Мастер-класс по регистрации в Электронно-библиотечных системах',
-      date: '05.06.2025',
-      link: '#'
-    },
-  ];
-  cards.forEach(card => card.link = `/announcements/${card.slug}`);
+  import AnnouncementCard from '$lib/features/announcements/ui/AnnouncementCard.svelte'
+  import { mockAnnouncements } from '$lib/features/announcements/model/mock'
 </script>
 
-<section class="max-w-screen-xl mx-auto px-4 pb-10 ">
+
+<section class="max-w-screen-xl mx-auto px-4 lg:px-0  pb-10 ">
   <div class="flex gap-8 items-end pb-5  ">
     <h2 class="text-3xl font-semibold">Объявления</h2>
     <a href="/announcements" class="text-base font-bold text-[#0d635a]">Смотреть все</a>
   </div>
 
   <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
-    {#each cards.slice(0, 3) as card}
-      <CardNotImage title={card.title} date={card.date} link={card.link} />
+    {#each mockAnnouncements.slice(0, 3) as card, i}
+      <div class={i === 0 ? '' : 'hidden sm:block'}>
+        <AnnouncementCard title={card.title} date={card.date} link={card.link} />
+      </div>
     {/each}
   </div>
 </section>
