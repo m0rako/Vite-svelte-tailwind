@@ -35,6 +35,6 @@
   };
 </script>
 
-<section class="max-w-screen-xl px-2 lg:px-0 mx-auto py-10 ">
+<section class="max-w-screen-xl px-4 lg:px-0 mx-auto py-10 ">
   <Carousel images={imageList} options={options}/>
 </section>

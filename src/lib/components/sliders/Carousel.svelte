@@ -14,6 +14,8 @@
         slidesPerPage: 1,
         infinite: true,
         Autoplay: {timeout: 3000},
+        center: false, // чтобы не было "по центру"
+        dragFree: false, // важно!
     };
     onMount(() => {
         instance = Carousel(sliderRef, {...optionsDefault, ...options}, {Autoplay});
@@ -51,27 +53,27 @@
 
     .f-carousel {
         --f-carousel-gap: 8px;
-        --f-carousel-slide-width: 19%; /* по умолчанию 5 карточек */
+        --f-carousel-slide-width: 19.5%; /* по умолчанию 5 карточек */
     }
 
-    /*!* ≥1536px (2xl) — 5 карточек *!*/
-    /*@media (min-width: 1536px) {*/
-    /*  .f-carousel {*/
-    /*    --f-carousel-slide-width: 19%;*/
-    /*  }*/
-    /*}*/
+    /* ≥1536px (2xl) — 5 карточек */
+    @media (min-width: 1536px) {
+      .f-carousel {
+        --f-carousel-slide-width: 19.5%;
+      }
+    }
 
     /* ≥1280px (xl) — 4 карточки */
     @media (max-width: 1535px) {
         .f-carousel {
-            --f-carousel-slide-width: 24%;
+            --f-carousel-slide-width: 24.3%;
         }
     }
 
     /* ≥1024px (lg) — 3 карточки */
     @media (max-width: 1279px) {
         .f-carousel {
-            --f-carousel-slide-width: 32%;
+            --f-carousel-slide-width: 33%;
         }
     }
 
@@ -79,14 +81,14 @@
     @media (max-width: 1023px) {
         .f-carousel {
             --f-carousel-gap: 15px;
-            --f-carousel-slide-width: 30%;
+            --f-carousel-slide-width: 32%;
         }
     }
 
     /* <768px — 2 карточка */
     @media (max-width: 767px) {
         .f-carousel {
-            --f-carousel-slide-width: 39%;
+            --f-carousel-slide-width: 49%;
         }
     }
 
