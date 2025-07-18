@@ -25,7 +25,7 @@
 </script>
 
 <nav class={`text-sm lg:text-base relative z-50 text-white ${isMainPage ? '' : 'bg-[#F7F7F7]'}`}>
-    <div class="max-w-screen-xl  mx-auto py-4 px-2 lg:px-0 flex items-center justify-between">
+    <div class=" max-w-screen-xl  mx-auto py-4 px-2 lg:px-0 flex items-center justify-between">
 
         <!-- Логотипы -->
         <div class="flex flex-col md:flex-row items-start gap-5 w-full">
@@ -43,7 +43,7 @@
         </div>
 
         <!-- Десктоп-меню -->
-        <div class="hidden md:flex items-center gap-5 font-semibold bg-[rgba(70,70,70,0.45)] py-[12px] px-[20px] rounded-2xl w-full max-w-[676px]">
+        <div class="hidden md:flex items-center gap-5 font-semibold bg-[rgba(70,70,70,0.60)] py-[12px] px-[20px] rounded-2xl w-full max-w-[676px]">
             <ul class="flex flex-row flex-wrap justify-center max-w-[484px] gap-2">
                 {#each navLinks as link}
                     <li class="text-center">

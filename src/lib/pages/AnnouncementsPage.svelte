@@ -1,7 +1,7 @@
 <script lang="ts">
-    import AnnouncementCard from '$lib/features/announcements/ui/AnnouncementCard.svelte'
-    import { mockAnnouncements } from '$lib/features/announcements/model/mock'
-    import type { Announcement } from '$lib/features/announcements/model/types'
+    import AnnouncementCard from '$lib/components/announcements/ui/AnnouncementCard.svelte'
+    import { mockAnnouncements } from '$lib/components/announcements/model/mock'
+    import type { Announcement } from '$lib/components/announcements/model/types'
 
     const cards: Announcement[] = mockAnnouncements;
 </script>

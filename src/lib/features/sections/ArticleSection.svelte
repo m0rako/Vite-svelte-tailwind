@@ -1,4 +1,4 @@
-<section class="max-w-screen-xl py-5 mx-auto px-4">
+<section class="max-w-screen-xl py-5 mx-auto">
   <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 text-xl">
 
     <a href="#" class="rounded-xl bg-[#0d635a] text-white p-5 flex items-end hover:scale-[1.02] transition">

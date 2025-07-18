@@ -1,5 +1,5 @@
 <script>
-    import CommonHeader from "$lib/components/layouts/headers/CommonHeader.svelte";
+    import CommonHeader from "$lib/features/layouts/headers/CommonHeader.svelte";
 </script>
 
 <CommonHeader>

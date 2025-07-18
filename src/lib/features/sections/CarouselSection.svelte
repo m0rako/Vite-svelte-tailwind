@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Carousel from '$lib/components/sliders/Carousel.svelte';
+  import Carousel from '$lib/features/sliders/Carousel.svelte';
   import type {CarouseItemType} from "$lib/types/carousel";
   import type {CarouselOptions} from "@fancyapps/ui/dist/carousel/carousel";
 

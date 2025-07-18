@@ -1,6 +1,6 @@
 <script lang="ts">
-  import NewsCard from '$lib/features/news/ui/NewsCard.svelte';
-  import { mockNews } from '$lib/features/news/model/mock';
+  import NewsCard from '$lib/components/news/ui/NewsCard.svelte';
+  import { mockNews } from '$lib/components/news/model/mock';
 </script>
 
 <section class="max-w-screen-xl mx-auto pb-5 px-4 lg:px-0 ">
@@ -10,10 +10,8 @@
   </div>
 
   <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
-    {#each mockNews.slice(0, 3) as news, i}
-      <div class={i === 0 ? '' : 'hidden sm:block'}>
-        <NewsCard {...news} />
-      </div>
+    {#each mockNews.slice(0, 3) as news}
+      <NewsCard {...news} />
     {/each}
   </div>
 </section>

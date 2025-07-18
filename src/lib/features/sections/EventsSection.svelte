@@ -1,6 +1,6 @@
 <script lang="ts">
-  import EventCard from '$lib/features/events/ui/EventCard.svelte';
-  import { mockEvents } from '$lib/features/events/model/mock';
+  import EventCard from '$lib/components/events/ui/EventCard.svelte';
+  import { mockEvents } from '$lib/components/events/model/mock';
 </script>
 
 <section class="max-w-screen-xl py-5 mx-auto px-4 lg:px-0 ">

@@ -1,13 +1,13 @@
 <script lang="ts">
   import { page } from '$app/stores';
-  import { mockNews } from '$lib/features/news/model/mock';
+  import { mockNews } from '$lib/components/news/model/mock';
 
   $: slug = $page.params.slug;
   $: current = slug ? mockNews.find(n => n.slug === slug) : null;
 </script>
 
 {#if current}
-  <section class="max-w-screen-xl mx-auto px-4 py-10">
+  <section class="max-w-screen-xl mx-auto px-4 Sy-10">
     <img
       src={current.image}
       alt={current.title}
