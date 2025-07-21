@@ -1,7 +1,7 @@
 <script>
 </script>
 
-<section class="max-w-screen-xl mx-auto py-5 grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 auto-rows-[minmax(200px,_auto)]">
+<section class="max-w-screen-xl mx-auto py-5 grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 auto-rows-[minmax(200px,_auto)] px-4 lg:px-0  ">
 
   <!-- 1 -->
   <div class="bg-white rounded-2xl p-5 lg:bg-[url(/images/sources/sources-1.png)] bg-bottom-right bg-no-repeat col-span-2 sm:col-span-1 ">

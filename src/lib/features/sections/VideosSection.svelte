@@ -10,10 +10,8 @@
     <a href="/videos" class="text-base font-bold text-[#0d635a]">Смотреть все</a>
   </div>
   <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
-    {#each mockVideos as video, i}
-      <div class={i === 0 ? '' : 'hidden sm:block'}>
+    {#each mockVideos as video}
       <VideoCard {...video} />
-      </div>
     {/each}
   </div>
 </section>

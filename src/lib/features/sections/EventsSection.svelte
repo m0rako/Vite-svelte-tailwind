@@ -9,10 +9,8 @@
     <a href="/events" class="text-base font-bold text-[#0d635a]">Смотреть все</a>
   </div>
   <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
-    {#each mockEvents as event, i}
-      <div class={i === 0 ? '' : 'hidden sm:block'}>
+    {#each mockEvents as event}
         <EventCard {...event} />
-      </div>
     {/each}
   </div>
 </section>

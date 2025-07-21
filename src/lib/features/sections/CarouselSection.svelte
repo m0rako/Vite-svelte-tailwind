@@ -1,6 +1,6 @@
 <script lang="ts">
-  import Carousel from '$lib/features/sliders/Carousel.svelte';
-  import type {CarouseItemType} from "$lib/types/carousel";
+  import Carousel from '$lib/components/carousel/ui/Carousel.svelte';
+  import type {CarouseItemType} from "$lib/components/carousel/model/carousel";
   import type {CarouselOptions} from "@fancyapps/ui/dist/carousel/carousel";
 
   const imageList: CarouseItemType[] = [

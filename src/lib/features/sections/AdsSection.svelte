@@ -11,10 +11,8 @@
   </div>
 
   <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
-    {#each mockAnnouncements.slice(0, 3) as card, i}
-      <div class={i === 0 ? '' : 'hidden sm:block'}>
+    {#each mockAnnouncements.slice(0, 3) as card}
         <AnnouncementCard title={card.title} date={card.date} link={card.link} />
-      </div>
     {/each}
   </div>
 </section>
