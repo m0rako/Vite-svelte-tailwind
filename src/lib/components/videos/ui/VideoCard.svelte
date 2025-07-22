@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { Video } from '$lib/features/videos/model/types';
+  import type { Video } from '$lib/features/videos/model/types';  //todo пропал файл
   export let title: Video['title'];
   export let preview: Video['preview'];
   export let url: Video['url'];

@@ -1,6 +1,6 @@
 <script lang="ts">
   import { page } from '$app/stores';
-  import { mockNews } from '$lib/components/news/model/mock';
+  import { mockNews } from '$lib/components/news/model/mock';  //todo export через index.ts
 
   $: slug = $page.params.slug;
   $: current = slug ? mockNews.find(n => n.slug === slug) : null;
