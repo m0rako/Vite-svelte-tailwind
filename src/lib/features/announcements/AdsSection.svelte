@@ -1,11 +1,10 @@
 <script lang="ts">
-  import AnnouncementCard from '$lib/components/announcements/ui/AnnouncementCard.svelte'
-  import { mockAnnouncements } from '$lib/components/announcements/model/mock'
+  import { AnnouncementCard, mockAnnouncements } from '$lib/components';
 </script>
 
 
 <section class="max-w-screen-xl mx-auto px-4 lg:px-0  pb-10 ">
-  <div class="flex gap-8 items-end pb-5  ">
+  <div class="flex gap-8 items-end pb-5 justify-between sm:justify-start">
     <h2 class="text-3xl font-semibold">Объявления</h2>
     <a href="/announcements" class="text-base font-bold text-[#0d635a]">Смотреть все</a>
   </div>

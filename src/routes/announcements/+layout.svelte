@@ -1,5 +1,5 @@
 <script>
-    import SecondaryLayout from "$lib/components/layouts/SecondaryLayout.svelte";  //todo export через index.ts, проверь существование
+    import { SecondaryLayout } from "$lib/features";
 
     let {children} = $props();
 </script>

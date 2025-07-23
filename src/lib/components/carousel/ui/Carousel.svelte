@@ -4,7 +4,7 @@
   import '@fancyapps/ui/dist/carousel/carousel.css';
   import {Autoplay} from '@fancyapps/ui/dist/carousel/carousel.autoplay.js';
   import '@fancyapps/ui/dist/carousel/carousel.autoplay.css';
-  import type {CarouseItemType} from "$lib/components/carousel/model/carousel";
+  import type {CarouseItemType} from "$lib/components/carousel/model/types";
   import type {CarouselOptions} from "@fancyapps/ui/dist/carousel/carousel";
 
   let {options, images}: { options: Partial<CarouselOptions>, images: CarouseItemType[] } = $props();

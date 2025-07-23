@@ -1,10 +1,9 @@
 <script lang="ts">
-  import NewsCard from '$lib/components/news/ui/NewsCard.svelte';
-  import { mockNews } from '$lib/components/news/model/mock';
+  import { NewsCard, mockNews } from '$lib/components';
 </script>
 
 <section class="max-w-screen-xl mx-auto pb-5 px-4 lg:px-0 ">
-  <div class="flex gap-8 items-end pb-5">
+  <div class="flex gap-8 items-end pb-5 justify-between sm:justify-start">
     <h2 class="text-3xl font-semibold">Новости</h2>
     <a href="/news" class="text-base font-bold text-[#0d635a]">Смотреть все</a>
   </div>

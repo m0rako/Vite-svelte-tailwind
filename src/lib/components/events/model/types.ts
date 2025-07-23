@@ -1,5 +1,5 @@
 export type Event = {
-  title: string;
+  url: string;
   date: string;
   image: string;
 }

@@ -1,5 +1,3 @@
-<script>
-</script>
 
 <section class="max-w-screen-xl py-5 px-4 lg:px-0   mx-auto">
   <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 text-xl">

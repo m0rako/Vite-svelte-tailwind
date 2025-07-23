@@ -1,10 +1,9 @@
 <script lang="ts">
-  import EventCard from '$lib/components/events/ui/EventCard.svelte';
-  import { mockEvents } from '$lib/components/events/model/mock';
+  import { EventCard, mockEvents } from '$lib/components';
 </script>
 
 <section class="max-w-screen-xl py-5 mx-auto px-4 lg:px-0 ">
-  <div class="flex gap-8 items-end pb-5">
+  <div class="flex gap-8 items-end pb-5 justify-between sm:justify-start">
     <h2 class="text-3xl font-semibold">Мероприятия</h2>
     <a href="/events" class="text-base font-bold text-[#0d635a]">Смотреть все</a>
   </div>

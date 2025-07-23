@@ -1,12 +1,11 @@
 <script lang="ts">
-  import type { Event } from '$lib/features/events/model/types';
-  export let title: Event['title'];
-  export let date: Event['date'];
-  export let image: Event['image'];
+  export let url: string;
+  export let date: string;
+  export let image: string;
 </script>
 
 <a
-  href="#"
+  href="{url}"
   class="block w-full h-[333px] rounded-2xl overflow-hidden bg-cover bg-center relative shadow hover:scale-[1.02] transition"
   style={`background-image: url(${image}); background-size: cover; background-position: center; background-repeat: no-repeat;`}
 >
