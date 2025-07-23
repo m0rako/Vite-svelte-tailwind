@@ -5,7 +5,7 @@
     import PrimaryHeader from "$lib/features/layouts/headers/PrimaryHeader.svelte";
     import NewsSection from "$lib/features/news/NewsSection.svelte";
     import SourcesSection from "$lib/features/sections/SourcesSection.svelte";
-    import EventsSection from "../features/events/EventsSection.svelte";
+    import EventsSection from "$lib/features/events/EventsSection.svelte";
     import VideosSection from "$lib/features/videos/VideosSection.svelte";
     import ArticleSection from "$lib/features/sections/ArticleSection.svelte";
     import ContactsSection

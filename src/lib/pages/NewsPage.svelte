@@ -1,7 +1,6 @@
 <script lang="ts">
-  import NewsCard from '$lib/components/news/ui/NewsCard.svelte'
-  import { mockNews } from '$lib/components/news/model/mock'
-  import type { News } from '$lib/components/news/model/types'
+  import { NewsCard, mockNews } from '$lib/components';
+  import type { News } from '$lib/components';
 
   const cards: News[] = mockNews;
 </script>
