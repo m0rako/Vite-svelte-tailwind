@@ -1,2 +1,2 @@
 export { mockNews } from './mock';
-export type { News } from './types';
+export type { NewsItem } from './types';

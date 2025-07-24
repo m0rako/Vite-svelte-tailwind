@@ -1,8 +1,8 @@
 <script lang="ts">
   import { NewsCard, mockNews } from '$lib/components';
-  import type { News } from '$lib/components';
+  import type { NewsItem } from '$lib/components';
 
-  const cards: News[] = mockNews;
+  const cards: NewsItem[] = mockNews;
 </script>
 
 <section class="max-w-screen-xl mx-auto px-4 py-10">

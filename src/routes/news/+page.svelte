@@ -1,5 +1,5 @@
 <script>
-  import {NewsPage} from "$lib";
+  import {AllNewsPage} from "$lib";
 </script>
 
-<NewsPage />
+<AllNewsPage />
