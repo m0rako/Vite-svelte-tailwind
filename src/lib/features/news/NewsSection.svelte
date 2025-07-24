@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { NewsCard, mockNews } from '$lib/components';
+  import { NewsCard, mockNews } from '$lib/entities';
 </script>
 
 <section class="max-w-screen-xl mx-auto pb-5 px-4 lg:px-0 ">

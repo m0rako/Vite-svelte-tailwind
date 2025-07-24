@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { EventCard, mockEvents } from '$lib/components';
+  import { EventCard, mockEvents } from '$lib/entities';
 </script>
 
 <section class="max-w-screen-xl py-5 mx-auto px-4 lg:px-0 ">

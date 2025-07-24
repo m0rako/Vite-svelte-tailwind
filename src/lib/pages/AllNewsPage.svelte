@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { NewsCard, mockNews } from '$lib/components';
-  import type { NewsItem } from '$lib/components';
+  import { NewsCard, mockNews } from '$lib/entities';
+  import type { NewsItem } from '$lib/entities';
 
   const cards: NewsItem[] = mockNews;
 </script>

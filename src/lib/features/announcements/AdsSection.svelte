@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { AnnouncementCard, mockAnnouncements } from '$lib/components';
+  import { AnnouncementCard, mockAnnouncements } from '$lib/entities';
 </script>
 
 

@@ -1,6 +1,6 @@
 <script lang="ts">
   import type {CarouselOptions} from "@fancyapps/ui/dist/carousel/carousel";
-  import { Carousel, imageList } from '$lib/components';
+  import { Carousel, imageList } from '$lib/entities';
 
   const options: Partial<CarouselOptions> = {
     infinite: true,
