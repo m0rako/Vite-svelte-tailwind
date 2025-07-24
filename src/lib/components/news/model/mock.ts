@@ -1,6 +1,6 @@
-import type { News } from './types';
+import type { NewsItem } from './types';
 
-export const mockNews: News[] = [
+export const mockNews: NewsItem[] = [
   {
     slug: 'exhibition-may-khv',
     title: 'В Хабаровске в мае открылась передвижная выставка, посвящённая героям специальной военной операции (СВО), приуроченная к 80-летию Победы в Великой Отечественной войне',

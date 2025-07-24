@@ -1,4 +1,4 @@
-export type News = {
+export type NewsItem = {
   slug: string;
   title: string;
   date: string;

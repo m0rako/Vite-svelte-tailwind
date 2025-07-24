@@ -1,5 +1,5 @@
 <script>
-  import { SecondaryLayout } from "$lib/features";
+  import { SecondaryLayout } from "$lib";
 
   let {children} = $props();
 </script>
